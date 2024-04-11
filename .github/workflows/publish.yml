@@ -34,7 +34,7 @@ jobs:
         env:
           RELEASE_TAG: ${{ env.release_tag }}
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: "${{ secrets.GH_TOKEN }}"
           script: |
             const script = require('.github/workflows/scripts/create_release.js')
             await script(github, context, core)
